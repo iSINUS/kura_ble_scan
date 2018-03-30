@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" configuration-policy="require" deactivate="deactivate" enabled="true" immediate="true" name="org.eclipse.kura.example.beacon.scanner.BeaconScannerExample">
+   <implementation class="org.eclipse.kura.example.beacon.scanner.BeaconScannerExample"/>
+   <reference bind="setBluetoothLeService" 
+            cardinality="1..1" 
+            interface="org.eclipse.kura.bluetooth.le.BluetoothLeService" 
+            name="BluetoothLeService" 
+            policy="static" 
+            unbind="unsetBluetoothLeService"/>
+    <property name="service.pid" type="String" value="org.eclipse.kura.example.beacon.scanner.BeaconScannerExample"/>
+</scr:component>
